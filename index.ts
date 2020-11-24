@@ -22,3 +22,18 @@ fromEvent(document, "click")
         subscriber.complete();  //like return statement subscriber ends observing 
     }, 2000 )
   });
+
+console.log("I am about to Subscribe");
+
+observable.subscribe({
+  next(x) {
+    console.log("We got " + x);
+  },
+  error(err) {
+    console.log("Error is : " + err);
+  },
+  complete() {
+    console.log("COMPLETED");
+  }
+});
+console.log("All done");
