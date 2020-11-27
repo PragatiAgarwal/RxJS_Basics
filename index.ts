@@ -25,7 +25,7 @@ fromEvent(document, "click")
 
 console.log("I am about to Subscribe");
 
-observable.subscribe({
+subscriber = observable.subscribe({
   next(x) {
     console.log("We got " + x);
   },
@@ -37,3 +37,4 @@ observable.subscribe({
   }
 });
 console.log("All done");
+subscriber.unsubscribe(); //To unsubscribe the observable
